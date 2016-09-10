@@ -15,6 +15,9 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public function meals(){
+        return $this->hasMany(Meals::class);
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
